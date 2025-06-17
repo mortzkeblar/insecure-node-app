@@ -104,4 +104,4 @@ jobs:
       with:
         base: ""
         head: ${{ github.ref_name }}
-        extra_args: --results=verified,unknown
+        extra_args: --results=verified,unknown --entropy=True
