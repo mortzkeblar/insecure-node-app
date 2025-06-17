@@ -1,11 +1,11 @@
+require('dotenv').config();
 const express = require('express');
-const dotenv = require('dotenv').config();
 const app = express();
 
 const API_KEY = process.env.API_KEY; 
 
 //const extraVar = 'Esta variable ya no se usa, pero alguien olvidó borrarla!'
-
+console.log(API_KEY)
 app.use(express.json());
 
 app.get('/', (req, res) => {
