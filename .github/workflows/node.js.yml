@@ -24,6 +24,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code 
+        uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -44,5 +46,11 @@ jobs:
       - name: Run npm audit
         run: |
           npm ci
-          npm audit --audit-level=low || true
+          npm audit --audit-level=low --json > npm-audit-results.json
+        continue-on-error: true
+      - name: Upload NPM audit report
+        uses: actions/upload-artifacts@v4
+        with:
+          name: npm-audit-results
+          path: npm-audit-results.json
 
