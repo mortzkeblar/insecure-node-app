@@ -23,6 +23,8 @@ jobs:
       - run: |
           npm ci
           npm test
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
   
   lint:
     runs-on: ubuntu-24.04
