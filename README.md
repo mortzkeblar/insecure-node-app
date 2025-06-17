@@ -2,6 +2,8 @@
 <h1> Insecure Node app </h1>
 </div>
 
+[![Security pipeline](https://github.com/mortzkeblar/insecure-node-app/actions/workflows/security.yml/badge.svg)](https://github.com/mortzkeblar/insecure-node-app/actions/workflows/security.yml)
+
 Este proyecto contiene una aplicación backend hecha en Node.js con Express,
 intencionalmente insegura y mal estructurada.
 El objetivo del trabajo se encuentra en la sección [Objetivo](#objetivo)
