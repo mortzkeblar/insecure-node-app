@@ -29,8 +29,8 @@ jobs:
         with:
           node-version: 22.16
       - run: |
-        npm ci
-        npm run lint
+          npm ci
+          npm run lint
 
   audit:
     runs-on: ubuntu-latest
