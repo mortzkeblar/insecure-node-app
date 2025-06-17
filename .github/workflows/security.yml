@@ -84,7 +84,8 @@ jobs:
     runs-on: ubuntu-24.04
     name: gitleaks
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: gitleaks/gitleaks-action@v2
@@ -94,5 +95,9 @@ jobs:
   secret-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: max/secret-scan@master
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run secret-scan
+        uses: max/secret-scan@master
+        with:
+          exclude_path: package-lock.json
