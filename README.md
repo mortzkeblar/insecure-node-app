@@ -4,6 +4,8 @@
 
 [![Security pipeline](https://github.com/mortzkeblar/insecure-node-app/actions/workflows/security.yml/badge.svg)](https://github.com/mortzkeblar/insecure-node-app/actions/workflows/security.yml)
 
+[![CodeQL](https://github.com/mortzkeblar/insecure-node-app/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/mortzkeblar/insecure-node-app/actions/workflows/github-code-scanning/codeql)
+
 Este proyecto contiene una aplicación backend hecha en Node.js con Express,
 intencionalmente insegura y mal estructurada.
 El objetivo del trabajo se encuentra en la sección [Objetivo](#objetivo)
